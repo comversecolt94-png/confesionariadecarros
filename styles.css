@@ -99,24 +99,7 @@ body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hi
 /* Responsive */
 @media (max-width: 1024px) { .modal-layout { grid-template-columns: 1fr; } .modal-image-placeholder { min-height: 300px; } }
 @media (max-width: 768px) { .nav-links { display: none; } .catalogo-section { padding: 40px 20px; } .hero h1 { font-size: 2.5rem; } .specs-grid { grid-template-columns: 1fr; } .modal-details { padding: 30px 20px; } }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
-.logo-img {
-    height: 50px; /* Ajusta el tamaño a tu gusto */
-    width: auto;
-    border-radius: 5px; /* Opcional, para suavizar los bordes */
-}
-
-.logo-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: var(--text-main);
-}
 .logo {
     display: flex;
     align-items: center;
