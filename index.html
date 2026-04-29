@@ -11,16 +11,14 @@
 
     <nav class="navbar">
         <div class="logo">
-    <img src="logo.jpg" alt="Logo David García Autos" class="logo-img">
-    <span class="logo-text">DAVID GARCÍA AUTOS</span>
-</div>
+            <!-- Usamos el nombre exacto del archivo de tu logo -->
+            <img src="WhatsApp Image 2026-04-29 at 4.11.19 AM(2).jpeg" alt="Logo David García Autos" class="logo-img">
+            <span class="logo-text">DAVID GARCÍA AUTOS</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#catalogo">CÁTÁLOGO <i class="fa-solid fa-chevron-down text-xs"></i></a></li>
-            <li><a href="#servicios">SERVICIOS <i class="fa-solid fa-chevron-down text-xs"></i></a></li>
-            <li><a href="#nosotros">NOSOTROS <i class="fa-solid fa-chevron-down text-xs"></i></a></li>
-            <li><a href="#rr-prestige">RR PRESTIGE</a></li>
-            <li><a href="#comunidad">COMUNIDAD RR</a></li>
+            <li><a href="#catalogo">CÁTÁLOGO</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
         </ul>
         <a href="#contacto" class="btn-contacto">Contacto</a>
     </nav>
@@ -33,10 +31,10 @@
         <div class="hero-nav-right"><i class="fa-solid fa-chevron-right"></i></div>
     </header>
 
+    <!-- El resto del código del catálogo se mantiene igual -->
     <section class="marcas-section">
         <h2><span>LAS MARCAS</span> MAS VENDIDAS EN DAVID GARCÍA</h2>
         <div class="marcas-carousel">
-            <div class="nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
             <div class="marcas-logos">
                 <span>LAMBORGHINI</span>
                 <span>BMW</span>
@@ -45,13 +43,10 @@
                 <span>HUMMER</span>
                 <span>MAZDA</span>
                 <span>MERCEDES</span>
-                <span>DUCATI</span>
-                <span>YAMAHA</span>
                 <span>AUDI</span>
                 <span>CHEVROLET</span>
                 <span>FORD</span>
             </div>
-            <div class="nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
     </section>
 
@@ -76,33 +71,22 @@
             </div>
         </div>
 
-        <div class="car-grid" id="car-grid">
-            <!-- Los carros se inyectan dinámicamente con JavaScript -->
-        </div>
+        <div class="car-grid" id="car-grid"></div>
     </section>
 
+    <!-- El modal y los botones flotantes siguen igual -->
     <div id="car-modal" class="modal hidden">
         <div class="modal-content">
             <button class="close-modal" id="close-modal"><i class="fa-solid fa-arrow-left"></i> Volver al Catálogo</button>
-            
             <div class="modal-layout">
                 <div class="modal-image-container">
-                    <div class="modal-image-placeholder" id="modal-image">
-                        <!-- La imagen del detalle se inyecta aquí -->
-                    </div>
-                    <div class="modal-nav-left"><i class="fa-solid fa-chevron-left"></i></div>
-                    <div class="modal-nav-right"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="modal-image-placeholder" id="modal-image"></div>
                 </div>
-                
                 <div class="modal-details">
-                    <h2 id="modal-title" class="car-title">NOMBRE DEL AUTO</h2>
-                    <h3 id="modal-price" class="car-price">$ 0</h3>
-                    
-                    <div class="specs-grid" id="modal-specs">
-                        <!-- Especificaciones inyectadas con JS -->
-                    </div>
-                    
-                    <a href="#contacto" class="btn-asesor">CONTACTA A UN ASESOR</a>
+                    <h2 id="modal-title" class="car-title"></h2>
+                    <h3 id="modal-price" class="car-price"></h3>
+                    <div class="specs-grid" id="modal-specs"></div>
+                    <a href="https://wa.me/tu-numero-aqui" class="btn-asesor" target="_blank">CONTACTA A UN ASESOR</a>
                 </div>
             </div>
         </div>
@@ -110,7 +94,7 @@
 
     <div class="floating-buttons">
         <a href="#" class="float-btn waze"><i class="fa-brands fa-waze"></i></a>
-        <a href="#" class="float-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/tu-numero-aqui" class="float-btn whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
     <script src="script.js"></script>

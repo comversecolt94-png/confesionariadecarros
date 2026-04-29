@@ -117,7 +117,26 @@ body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hi
     letter-spacing: 2px;
     color: var(--text-main);
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    font-style: italic;
+}
 /* Ajuste para móviles */
 @media (max-width: 768px) {
     .logo-text {
