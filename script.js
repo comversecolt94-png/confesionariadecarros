@@ -182,3 +182,18 @@ closeModalBtn.addEventListener('click', () => {
 
 // Inicializar
 renderCars();
+function showSection(sectionId) {
+    const inicioView = document.getElementById('view-inicio');
+    const nosotrosView = document.getElementById('view-nosotros');
+
+    if (sectionId === 'nosotros') {
+        inicioView.classList.add('hidden-view');
+        nosotrosView.classList.remove('hidden-view');
+        window.scrollTo(0, 0); // Sube al inicio de la "nueva página"
+    } else {
+        nosotrosView.classList.add('hidden-view');
+        inicioView.classList.remove('hidden-view');
+    }
+}
+
+// (El resto de tu código de renderizado de autos se mantiene igual)
