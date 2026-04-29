@@ -128,4 +128,56 @@ body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hi
     .logo-img {
         height: 40px;
     }
+ /* Estilos para la sección Nosotros y el Video */
+.nosotros-section { 
+    padding: 80px 50px; 
+    background: #0a0a0a; 
+    border-top: 1px solid var(--border-color); 
+}
+.nosotros-container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+.nosotros-title { 
+    color: var(--accent-gold); 
+    margin-bottom: 30px; 
+    font-style: italic; 
+    font-size: 2rem; 
+    text-transform: uppercase;
+}
+.historia-box p { 
+    color: var(--text-muted); 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    font-size: 1.1rem; 
+}
+.destacado-video-row { 
+    display: grid; 
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 40px; 
+    margin-top: 50px; 
+    align-items: center; 
+}
+.video-wrapper { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    border: 1px solid var(--border-color); 
+}
+.video-wrapper iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+.video-info h3 { 
+    color: var(--accent-yellow); 
+    margin-bottom: 15px; 
+    font-style: italic;
+}
+@media (max-width: 768px) { 
+    .destacado-video-row { grid-template-columns: 1fr; } 
+}   
 }

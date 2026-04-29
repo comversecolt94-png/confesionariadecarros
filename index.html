@@ -10,18 +10,19 @@
 <body>
 
     <nav class="navbar">
-    <div class="logo">
-        <!-- Nombre de archivo simplificado -->
-        <img src="logo.jpg" alt="Logo David García Autos" class="logo-img">
-        <span class="logo-text">DAVID GARCÍA AUTOS</span>
-    </div>
-    <ul class="nav-links">
-        <li><a href="#inicio">INICIO</a></li>
-        <li><a href="#catalogo">CÁTÁLOGO</a></li>
-        <li><a href="#nosotros">NOSOTROS</a></li>
-    </ul>
-    <a href="#contacto" class="btn-contacto">Contacto</a>
-</nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo David García Autos" class="logo-img">
+            <span class="logo-text">DAVID GARCÍA AUTOS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#catalogo">CÁTÁLOGO</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
+        </ul>
+        <!-- Enlace de WhatsApp actualizado -->
+        <a href="https://api.whatsapp.com/send/?phone=573052630861" class="btn-contacto" target="_blank">Contacto</a>
+    </nav>
+
     <header id="inicio" class="hero">
         <div class="hero-content">
             <h1>CONDUCE A OTRO NIVEL</h1>
@@ -30,9 +31,8 @@
         <div class="hero-nav-right"><i class="fa-solid fa-chevron-right"></i></div>
     </header>
 
-    <!-- El resto del código del catálogo se mantiene igual -->
     <section class="marcas-section">
-        <h2><span>LAS MARCAS</span> MAS VENDIDAS EN DAVID GARCÍA</h2>
+        <h2><span>LAS MARCAS</span> MÁS VENDIDAS EN DAVID GARCÍA</h2>
         <div class="marcas-carousel">
             <div class="marcas-logos">
                 <span>LAMBORGHINI</span>
@@ -73,7 +73,39 @@
         <div class="car-grid" id="car-grid"></div>
     </section>
 
-    <!-- El modal y los botones flotantes siguen igual -->
+    <!-- SECCIÓN NOSOTROS CON TU VIDEO -->
+    <section id="nosotros" class="nosotros-section">
+        <div class="nosotros-container">
+            <h2 class="nosotros-title">NUESTRA HISTORIA</h2>
+            <div class="historia-box">
+                <p>
+                    <strong>David García Autos</strong> nació con una visión clara a mis 18 años: transformar la forma en que los barranquilleros adquieren sus vehículos. Lo que empezó como un sueño personal se convirtió en un compromiso con la excelencia, ofreciendo una experiencia totalmente diferente a la convencional.
+                </p>
+                <p>
+                    Creemos en los negocios hechos con <strong>transparencia total, asesoría real y cero presiones</strong>. Nos hemos consolidado como un referente en la ciudad para quienes buscan autos nuevos, usados e importados, garantizando siempre una compra o renta segura y sin complicaciones.
+                </p>
+            </div>
+
+            <div class="destacado-video-row">
+                <div class="video-wrapper">
+                    <!-- Link de YouTube con el ID xfXhLsUkWg4 -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/xfXhLsUkWg4" 
+                        title="Chevrolet Corvette Z06" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>DESTACADO</h3>
+                    <p>Aquí uno de nuestros carros, el <strong>Chevrolet Corvette Z06</strong>, nuevo en Barranquilla. Una joya de la ingeniería lista para las calles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal y botones de cierre -->
     <div id="car-modal" class="modal hidden">
         <div class="modal-content">
             <button class="close-modal" id="close-modal"><i class="fa-solid fa-arrow-left"></i> Volver al Catálogo</button>
@@ -85,7 +117,7 @@
                     <h2 id="modal-title" class="car-title"></h2>
                     <h3 id="modal-price" class="car-price"></h3>
                     <div class="specs-grid" id="modal-specs"></div>
-                    <a href="https://wa.me/tu-numero-aqui" class="btn-asesor" target="_blank">CONTACTA A UN ASESOR</a>
+                    <a href="https://api.whatsapp.com/send/?phone=573052630861" class="btn-asesor" target="_blank">CONTACTA A UN ASESOR</a>
                 </div>
             </div>
         </div>
@@ -93,7 +125,7 @@
 
     <div class="floating-buttons">
         <a href="#" class="float-btn waze"><i class="fa-brands fa-waze"></i></a>
-        <a href="https://wa.me/tu-numero-aqui" class="float-btn whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=573052630861" class="float-btn whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
     <script src="script.js"></script>
