@@ -182,18 +182,36 @@ closeModalBtn.addEventListener('click', () => {
 
 // Inicializar
 renderCars();
-function showSection(sectionId) {
-    const inicioView = document.getElementById('view-inicio');
-    const nosotrosView = document.getElementById('view-nosotros');
+// ... (Toda tu base de datos carData se mantiene igual arriba)
 
-    if (sectionId === 'nosotros') {
-        inicioView.classList.add('hidden-view');
-        nosotrosView.classList.remove('hidden-view');
-        window.scrollTo(0, 0); // Sube al inicio de la "nueva página"
-    } else {
-        nosotrosView.classList.add('hidden-view');
-        inicioView.classList.remove('hidden-view');
-    }
+window.openModal = function(id) {
+    const car = carData.find(c => c.id === id);
+    if(!car) return;
+
+    document.getElementById('modal-title').textContent = `${car.marca} ${car.modelo} ${car.anio}`;
+    document.getElementById('modal-price').textContent = `$ ${car.precio}`;
+    
+    // Inyectar la imagen grande en el modal
+    document.getElementById('modal-image').innerHTML = `<img src="${car.imagen}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='https://via.placeholder.com/800x600/222222/ffffff?text=Falta+Imagen'">`;
+
+    // Generar link de WhatsApp dinámico
+    const mensaje = `Hola, estoy interesado en el ${car.marca} ${car.modelo} que vi en su catálogo.`;
+    document.getElementById('whatsapp-link').href = `https://api.whatsapp.com/send?phone=573052630861&text=${encodeURIComponent(mensaje)}`;
+
+    // Poblar cuadrícula de especificaciones
+    const specsHTML = `
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-gauge-high"></i></div><div class="spec-text"><span class="spec-label">Kilometraje</span><span class="spec-val">${car.kilometraje} km</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-car-battery"></i></div><div class="spec-text"><span class="spec-label">Motor</span><span class="spec-val">${car.motor}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-door-closed"></i></div><div class="spec-text"><span class="spec-label">Puertas</span><span class="spec-val">${car.puertas}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-gears"></i></div><div class="spec-text"><span class="spec-label">Tracción</span><span class="spec-val">${car.traccion}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-car-rear"></i></div><div class="spec-text"><span class="spec-label">Placa</span><span class="spec-val">Termina en ${car.placaTerminada}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-regular fa-id-card"></i></div><div class="spec-text"><span class="spec-label">Ciudad Placa</span><span class="spec-val">${car.placaDe}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-gear"></i></div><div class="spec-text"><span class="spec-label">Transmisión</span><span class="spec-val">${car.transmision}</span></div></div>
+        <div class="spec-item"><div class="spec-icon"><i class="fa-solid fa-gas-pump"></i></div><div class="spec-text"><span class="spec-label">Combustible</span><span class="spec-val">${car.combustible}</span></div></div>
+    `;
+    
+    document.getElementById('modal-specs').innerHTML = specsHTML;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; 
 }
-
-// (El resto de tu código de renderizado de autos se mantiene igual)
+// ... (El resto del código renderCars y closeModal se mantiene igual)

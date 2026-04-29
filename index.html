@@ -64,9 +64,31 @@
         <div class="car-grid" id="car-grid"></div>
     </section>
 
-    <!-- Modal y Botones Flotantes -->
+    <!-- MODAL ACTUALIZADO -->
     <div id="car-modal" class="modal hidden">
-        <!-- (Contenido del modal que ya tienes en tu script) -->
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">
+                <i class="fa-solid fa-xmark"></i> CERRAR
+            </button>
+            
+            <div class="modal-main-layout">
+                <div id="modal-image" class="modal-image-box">
+                    <!-- Aquí el JS inyecta la imagen -->
+                </div>
+                <div class="modal-info-box">
+                    <h2 id="modal-title"></h2>
+                    <div id="modal-price" class="modal-price-tag"></div>
+                    
+                    <div id="modal-specs" class="specs-container">
+                        <!-- Aquí el JS inyecta las especificaciones -->
+                    </div>
+
+                    <a id="whatsapp-link" href="#" target="_blank" class="btn-asesor-modal">
+                        <i class="fa-brands fa-whatsapp"></i> CONTACTAR ASESOR
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="floating-buttons">
